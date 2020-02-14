@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style type="text/css">
+body {
+	margin:0;
+	#Vader_1; background:url(Imagenes/Vader_1.jpg) 50% 0 repeat fixed; min-height: 1000px;
+	#Vader_2; background:url(Imagenes/Vader_2.jpg) 50% 0 repeat min-height; 1000px;
+}
+
+#Vader_1 {
+background:url(Imagenes/Vader_1.jpg) 50% 0 repeat fixed; min-height: 1000px;
+height: 1000px;
+margin: 0;
+width: 100%;
+max-width: 1920px;
+position: relative;
+}
+#Vader_1 article {
+height: 458px;
+position: absolute;
+text-align: center;
+top: 150px;
+width: 100%;
+}
+#Vader_2 {
+background:url(Imagenes/Vader_2.jpg) 50% 0 repeat fixed; min-height: 1000px;
+height: 1000px;
+margin: 0;
+width: 100%;
+max-width: 1920px;
+position: relative;
+-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+#Vader_2 article {
+height: 458px;
+position: absolute;
+text-align: center;
+top: 350px;
+width: 100%;
+}
+$(document).ready(function(){
+    $('section[data-type="background"]').each(function(){
+        var $bgobj = $(this); // assigning the object
+        $(window).scroll(function() {
+            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+            // Put together our final background position
+            var coords = '50% '+ yPos + 'px';
+            // Move the background
+            $bgobj.css({ backgroundPosition: coords });
+        });
+    });
+});
+
+</style>
+</head>
+
+<body>
+<section id="Vader_1" data-type="background" data-speed="10">
+	<section class="pages" id="" data-type="background" 				data-speed="10">
+<article><img src="Imagenes/Bar_Veider.png" width="632" height="393" alt=""></article>
+	</section>
+</section>
+
+<section id="Vader_2" data-type="background" data-speed="10">
+	<section class="pages" id="" data-type="background" data-speed="10">
+<article>
+<a href="../Principal/Bar Veider.html"><img src="Imagenes/Vader_Fuerza.png" width="1000" height="399" alt="" role="button"></a>
+<a href="../Principal/Bar Veider.html">
+<img src="Imagenes/Unirse.png" width="189" height="189" alt="" align="right" role="button"></a></article>
+	</section>
+    
+</section>
+
+
+</body>
+</html>
